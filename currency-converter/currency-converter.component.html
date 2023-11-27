@@ -1,0 +1,18 @@
+<div>
+    <h2>Конвертер валют</h2>
+    <div>
+      <label>Сумма (валюта 1): </label>
+      <input [(ngModel)]="amount1" (ngModelChange)="convertCurrencies()" />
+      <select [(ngModel)]="currency1" (ngModelChange)="convertCurrencies()">
+        <option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</option>
+      </select>
+    </div>
+  
+    <div>
+      <label>Сумма (валюта 2): </label>
+      <input [(ngModel)]="amount2" disabled />
+      <select [(ngModel)]="currency2" (ngModelChange)="convertCurrencies()">
+        <option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</option>
+      </select>
+    </div>
+  </div>
